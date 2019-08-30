@@ -6,8 +6,7 @@ struct heap {
 	int *data;
 };
 
-int parent(int);
-int left(int);
-int right(int);
-void max_heapify(struct heap *, int);
 struct heap *build_max_heap(int *, int);
+struct heap *build_empty_heap(int);
+int poll(struct heap *);
+void insert(struct heap *pt, int new);

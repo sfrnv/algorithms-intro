@@ -11,6 +11,13 @@ int main(int argc, char *argv[]) {
 	printarr(arr, length);
 	struct heap *pt = build_max_heap(arr, length);
 	printarr(pt->data, length);
+
+	pt = build_empty_heap(32);
+	for (int i = 1; i < 21; ++i)
+	{
+		insert(pt, i);
+	}
+	printarr(pt->data, 20);
 	return 0;
 }
 
